@@ -3,14 +3,14 @@ dataset.numCameras = 8;
 dataset.videoParts = [9, 9, 9, 9, 9, 8, 8, 9];
 
 % Set these accordingly
-dataset.savePath = 'F:/DukeMTMC/'; % Where to store DukeMTMC (160 GB)
+dataset.savePath = '/vol2/duke-mtmc/'; % Where to store DukeMTMC (160 GB)
 
 GET_ALL               = false; % Set this to true if you want to download everything
-GET_GROUND_TRUTH      = true;
-GET_CALIBRATION       = true;
-GET_VIDEOS            = true;
+GET_GROUND_TRUTH      = false;
+GET_CALIBRATION       = false;
+GET_VIDEOS            = false;
 GET_DPM               = false;
-GET_OPENPOSE          = true;
+GET_OPENPOSE          = false;
 GET_FGMASKS           = false;
 GET_REID              = true;
 GET_VIDEO_REID        = false;
