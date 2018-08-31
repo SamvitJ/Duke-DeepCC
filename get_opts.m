@@ -3,8 +3,8 @@ function opts = get_opts()
 addpath(genpath('src'))
 
 opts = [];
-opts.dataset_path    = 'F:/DukeMTMC/';
-opts.gurobi_path     = 'C:/gurobi800/win64/matlab';
+opts.dataset_path    = '/vol2/duke-mtmc/';
+opts.gurobi_path     = '/opt/gurobi800/linux64/matlab';
 opts.experiment_root = 'experiments';
 opts.experiment_name = 'demo';
 
@@ -67,7 +67,7 @@ identities.extract_images = true;
 % CNN model
 net = [];
 net.train_set = 'data/duke_train.csv';
-net.image_root = 'F:/DukeMTMC/DukeMTMC-reID';
+net.image_root = '/vol2/duke-mtmc/DukeMTMC-reID';
 net.model_name = 'resnet_v1_50';
 net.initial_checkpoint = 'resnet_v1_50.ckpt';
 net.experiment_root = 'experiments/demo_weighted_triplet';
