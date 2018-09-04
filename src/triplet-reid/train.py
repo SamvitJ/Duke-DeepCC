@@ -269,7 +269,7 @@ def main():
                    rotate=(-5, 5),
                    translate_percent={"x": (-0.1, 0.1), "y": (-0.1, 0.1)},
                    ),  # rotate by -45 to +45 degrees),
-        iaa.Crop(px=(0, 16)),  # crop images from each side by 0 to 16px (randomly chosen)
+        iaa.Crop(pc=(0, 0.125)),  # crop images from each side by 0 to 12.5% (randomly chosen)
         iaa.CoarsePepper(p=0.01, size_percent=0.1)
     ], random_order=False)
     # Content transformation
