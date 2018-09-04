@@ -2,7 +2,7 @@ function trajectories = getTrajectoryFeatures(opts, trajectories)
 
 % Gather bounding boxes for this trajectory
 detections = [];
-csvfile = sprintf('%s/%s/L3-identities/temp_images/L2images.csv',opts.experiment_root, opts.experiment_name);
+csvfile = sprintf('%s/%s/L3-identities/temp_images_%s/L2images.csv',opts.experiment_root, opts.experiment_name, opts.sequence_names{opts.sequence});
 
 
 if opts.identities.extract_images

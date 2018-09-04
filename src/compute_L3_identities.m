@@ -3,7 +3,7 @@ function compute_L3_identities(opts)
 
 trajectories = loadL2trajectories(opts);
 trajectories = getTrajectoryFeatures(opts, trajectories);
-filename = sprintf('%s/%s/L3-identities/L2trajectories.mat',opts.experiment_root, opts.experiment_name);
+filename = sprintf('%s/%s/L3-identities/L2trajectories_%s.mat',opts.experiment_root, opts.experiment_name, opts.sequence_names{opts.sequence});
 save(filename,'trajectories');
 %  load(filename);
 identities = trajectories;
