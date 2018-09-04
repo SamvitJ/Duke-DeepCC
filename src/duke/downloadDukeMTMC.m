@@ -9,10 +9,10 @@ GET_ALL               = false; % Set this to true if you want to download everyt
 GET_GROUND_TRUTH      = false;
 GET_CALIBRATION       = false;
 GET_VIDEOS            = false;
-GET_DPM               = false;
-GET_OPENPOSE          = false;
+GET_DPM               = true;
+GET_OPENPOSE          = true;
 GET_FGMASKS           = false;
-GET_REID              = true;
+GET_REID              = false;
 GET_VIDEO_REID        = false;
 
 
