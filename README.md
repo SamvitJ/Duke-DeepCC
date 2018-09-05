@@ -70,7 +70,7 @@ view_distance_distribution(opts);
   <img src="http://vision.cs.duke.edu/DukeMTMC/img/distribution.jpg?" width="400px" />
 </div>
 
-You can also use `features = embed_detections(opts, detections);` to compute features for a set of detections in the format [camera, frame, left, top, width, height];
+Optionally, you can use `features = embed_detections(opts, detections);` to compute features for a set of detections in the format [camera, frame, left, top, width, height];. A usage example can be found in `compute_L0_features.m`.
 
 ### Running DeepCC
 
