@@ -269,7 +269,7 @@ def main():
                    rotate=(-5, 5),
                    translate_percent={"x": (-0.1, 0.1), "y": (-0.1, 0.1)},
                    ),  # rotate by -45 to +45 degrees),
-        iaa.Crop(pc=(0, 0.125)),  # crop images from each side by 0 to 12.5% (randomly chosen)
+        iaa.Crop(percent=(0, 0.125)),  # crop images from each side by 0 to 12.5% (randomly chosen)
         iaa.CoarsePepper(p=0.01, size_percent=0.1)
     ], random_order=False)
     # Content transformation
@@ -385,7 +385,7 @@ def main():
     net_input_size = (args.net_input_height, args.net_input_width)
     pre_crop_size = (args.pre_crop_height, args.pre_crop_width)
     dataset = dataset.map(
-        lambda im, fid, pid: common.fid_to_image(
+        lambda  fid, pid: common.fid_to_image(
             fid, pid, image_root=args.image_root,
             image_size=pre_crop_size if args.crop_augment else net_input_size),
         num_parallel_calls=args.loading_threads)
@@ -393,7 +393,7 @@ def main():
     # Augment the data if specified by the arguments.
     if args.augment == False:
         dataset = dataset.map(
-            lambda fid, pid: common.fid_to_image(
+            lambda im, fid, pid: common.fid_to_image(
                 fid, pid, image_root=args.image_root,
                 image_size=pre_crop_size if args.crop_augment else net_input_size),   #Ergys
             num_parallel_calls=args.loading_threads)
