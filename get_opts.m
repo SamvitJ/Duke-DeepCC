@@ -7,6 +7,7 @@ opts.dataset_path    = '/vol2/duke-mtmc/';
 opts.gurobi_path     = '/opt/gurobi800/linux64/matlab';
 opts.experiment_root = 'experiments';
 opts.experiment_name = 'demo';
+opts.python3         = 'python3'; 
 
 opts.reader = DukeVideoReader(opts.dataset_path);
 

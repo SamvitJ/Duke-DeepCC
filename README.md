@@ -58,7 +58,7 @@ train_duke(opts);
 embed(opts);
 evaluation_res_duke_fast(opts);
 ```
-The code will run 25,000 training iterations, compute embeddings for query and gallery images of the DukeMTMC-reID benchmark, and finally print the mAP and rank-1 score. The above functions are MATLAB interfaces to the Tensorflow/Python code of [Beyer et al.](https://github.com/VisualComputingInstitute/triplet-reid/) The code has been extended to include our weighted triplet loss.
+The code will run 25,000 training iterations, compute embeddings for query and gallery images of the DukeMTMC-reID benchmark, and finally print the mAP and rank-1 score. The above functions are MATLAB interfaces to the Tensorflow/Python3 code of [Beyer et al.](https://github.com/VisualComputingInstitute/triplet-reid/) The code has been extended to include our weighted triplet loss.
 
 Alternatively you can run `train_duke_hnm` to train with hard negative mining.
 
